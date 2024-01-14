@@ -1,0 +1,20 @@
+Requisitos para rodar o projeto
+Setup de ambiente:
+Node LTS
+Usando nvm
+nvm install
+nvm use
+
+Estrutura do projeto:
+/components : Aqui dentro estará  o components responsável para fazer a Navegação (AppNavigator.jsx) e o component responsável por fazer o upload da imagem (ImageUploader.jsx)
+/screens : Aqui dentro estará as telas do aplicativo, tela de cadastro de fornecedores (CadastroFornecedorScreen.jsx) e a tela de lista dos fornecedores (ListaFornecedorScreen.jsx)
+"App.jsx" : Responsável por rodar o Aplicativo
+
+  Bibliotecas Importadas:
+  import React, { useState } from 'react'; // Para poder utilizar o "useState" e modificar o "nome, endereço, contato e categoria" 
+  import { View, Text, TextInput, Button, StyleSheet } from 'react-native'; // Import padrão para criar telas (View), Criação de Texto (Text), Criação de Input(TextInput), Criação de Botões(Button), Criação de estilização (StyleSheet)
+  import AsyncStorage from '@react-native-async-storage/async-storage'; // Import para utilizar a biblioteca "AsyncStorage" para fazer armazenamento local dos Fornecedores cadastrados
+  import { createStackNavigator } from '@react-navigation/stack'; // Import para utilizar a biblioteca "CreateStackNavigator" para navegar entre as 2 telas
+  import { NavigationContainer, useNavigation } from '@react-navigation/native'; // Import para utilizar a biblioteca "NavigationContainer" e "useNavigation" para navegar entre as 2 telas
+  import { ListItem } from 'react-native-elements'; // Import para utilizar a biblioteca "ListItem" para criar uma lista dos fornecedores
+  import ImagePicker from 'react-native-image-picker'; // Import para utilizar a biblioteca "ImagePicker" para poder fazer upload das imagens
